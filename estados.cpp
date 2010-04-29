@@ -35,13 +35,13 @@ void AFD::EstadoInicial(char x) ///////////////////////////////////////ESTADO 1
                           output(Estado5(x));
                           else
                           if(x == '*') //transição 1 para 6
-                          output(Estado6(x));
+                          Estado6(x);
                           else
                           if(x == ':') //transição 1 para 7
                           output(Estado7(x));
                           else
                           if(x == '(') //transição 1 para 8
-                          output(Estado8(x));
+                          Estado8(x);
                           else
                           if(x == '/') //transição 1 para 9
                           output(Estado9(x));
@@ -68,10 +68,10 @@ void AFD::EstadoInicial(char x) ///////////////////////////////////////ESTADO 1
                           output(Estado16(x));
                           else
                           if(x == '}') //transição 1 para 17
-                          output(Estado17(x));
+                          Estado17(x);
                           else
                           if(x == '{') //transição 1 para 18
-                          output(Estado18(x));
+                          Estado18(x);
                           else
                           if(x != ' ' && x != '\n') //tratamento de erro
                           {
@@ -220,9 +220,9 @@ int AFD::Estado6(char x) //////////////////////////////////////////////ESTADO 6
     x = sourcecode[si];
     
     if(x == ')')
-    return Estado22(x); //transição 6 para 22
+    Estado22(x); //transição 6 para 22
     else
-    return 6;
+    output(6);
 }
 
 int AFD::Estado7(char x) //////////////////////////////////////////////ESTADO 7
@@ -246,9 +246,9 @@ int AFD::Estado8(char x) //////////////////////////////////////////////ESTADO 8
     x = sourcecode[si];
     
     if(x == '*')
-    return Estado24(x); //transição 8 para 24
+    Estado24(x); //transição 8 para 24
     else
-    return 8;
+    output(8);
 }
 
 int AFD::Estado9(char x) //////////////////////////////////////////////ESTADO 9
@@ -319,16 +319,13 @@ int AFD::Estado17(char x) ////////////////////////////////////////////ESTADO 17
 {
     buffertoken.append(1, x);
     si++;
-    
-    return 17;
 }
 
 int AFD::Estado18(char x) ////////////////////////////////////////////ESTADO 18
 {
     buffertoken.append(1, x);
     si++;
-    
-    return 18;
+    comentCHAVE();
 }
 
 int AFD::Estado19(char x) ////////////////////////////////////////////ESTADO 19
@@ -359,8 +356,6 @@ int AFD::Estado22(char x) ////////////////////////////////////////////ESTADO 22
 {
     buffertoken.append(1, x);
     si++;
-    
-    return 22;
 }
 
 int AFD::Estado23(char x) ////////////////////////////////////////////ESTADO 23
@@ -375,6 +370,5 @@ int AFD::Estado24(char x) ////////////////////////////////////////////ESTADO 24
 {
     buffertoken.append(1, x);
     si++;
-    
-    return 24;
+    comentPAR();
 }

@@ -88,7 +88,9 @@ void AFD::output(int code)
          if(code == 24)
          cout << codeline << " " << buffertoken << " [SC_ACOM] \n"; //SÍMBOLO COMPOSTO_ABRE COMENTÁRIO
          
+         //ERROS
          if(code == 99)
          cout << codeline << " " << buffertoken << " [ERRO/INVALIDO] \n"; //ERRO OU CARACTER INVÁLIDO
-         
+         if(code == 100)
+         cout << codeline << " " << " [ERRO: COMENTARIO ABERTO] \n"; //COMENTÁRIO NÃO FOI FECHADO
 }

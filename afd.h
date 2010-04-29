@@ -49,6 +49,8 @@ class AFD
             bool PalavraReservada();
             bool erroEstado3loop(char x);
             int erroEstado3(char x);
+            void comentPAR();
+            void comentCHAVE();
             
             //output
             void output(int code);
