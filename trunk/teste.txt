@@ -1,0 +1,12 @@
+pro#gram numerosPerfeitos;
+
+uses crt;
+ 
+var
+	ate, x, soma, i: integer;
+ 
+begin
+	clrscr;
+	x := 0;
+	writeln(Numeros perfeitos abaixo de);
+	Readln(ate);
