@@ -15,6 +15,7 @@ AFD::AFD()
                            si = 0;
                            codeline = 1;
                            
+                           system("CLS");
                            EstadoInicial(entrada);
           }
 }                
@@ -23,7 +24,12 @@ bool AFD::abrearquivo()
 {
                   char aux;
                   
-                  cout << "digite o nome do arquivo: ";
+                  cout << "ANALISADOR LEXICO - PASCAL\n\n";
+                  cout << "Desenvolvedores:\nAna Carolina Alves Rodrigues\nSamuel Lourenco\n\n\n";
+                  cout << "Crie um arquivo texto com o codigo em pascal na mesma \npasta onde esta o executavel.\n";
+                  cout << "Para iniciar a analise, insira o nome do arquivo junto com sua extensao.\n";
+                  cout << "Exemplo: teste.txt\n\n";
+                  cout << "Digite o nome do arquivo: ";
                   cin >> filename;
                   
                   if((sourcefile = fopen(filename, "r")) != NULL)
