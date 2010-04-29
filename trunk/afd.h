@@ -45,6 +45,7 @@ class AFD
             int Estado24(char x);
             
             bool Estado2loop(char x);
+            bool PalavraReservada();
             bool Estado3loop(char x);
             
             //output
