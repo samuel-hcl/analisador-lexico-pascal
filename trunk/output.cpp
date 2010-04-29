@@ -40,55 +40,55 @@ using namespace std;
 void AFD::output(int code)
 {
          if(code == 1)
-         cout << codeline << " " << buffertoken << " [ID] \n";
+         cout << codeline << " " << buffertoken << " [ID] \n"; //IDENTIFICADOR
          if(code == 2)
-         cout << codeline << " " << buffertoken << " [PR] \n";
+         cout << codeline << " " << buffertoken << " [PR] \n"; //PALAVRA RESERVADA
          if(code == 3)
-         cout << codeline << " " << buffertoken << " [NUM] \n";
+         cout << codeline << " " << buffertoken << " [NUM] \n"; //NÚMERO
          if(code == 4)
-         cout << codeline << " " << buffertoken << " [SE_MENOR] \n";
+         cout << codeline << " " << buffertoken << " [SE_MENOR] \n"; //SÍMBOLO ESPECIAL_MENOR
          if(code == 5)
-         cout << codeline << " " << buffertoken << " [SE_MAIOR] \n";
+         cout << codeline << " " << buffertoken << " [SE_MAIOR] \n"; //SÍMBOLO ESPECIAL_MAIOR
          if(code == 6)
-         cout << codeline << " " << buffertoken << " [SE_MULT] \n";
+         cout << codeline << " " << buffertoken << " [SE_MULT] \n"; //SÍMBOLO ESPECIAL_MULTIPLICAÇÃO
          if(code == 7)
-         cout << codeline << " " << buffertoken << " [SE_2PT] \n";
+         cout << codeline << " " << buffertoken << " [SE_2PT] \n"; //SÍMBOLO ESPECIAL_DOIS PONTOS
          if(code == 8)
-         cout << codeline << " " << buffertoken << " [SE_APAR] \n";
+         cout << codeline << " " << buffertoken << " [SE_APAR] \n"; //SÍMBOLO ESPECIAL_ABRE PARÊNTESES
          if(code == 9)
-         cout << codeline << " " << buffertoken << " [SE_DIV] \n";
+         cout << codeline << " " << buffertoken << " [SE_DIV] \n"; //SÍMBOLO ESPECIAL_DIVISÃO
          if(code == 10)
-         cout << codeline << " " << buffertoken << " [SE_ADD] \n";
+         cout << codeline << " " << buffertoken << " [SE_ADD] \n"; //SÍMBOLO ESPECIAL_ADIÇÃO
          if(code == 11)
-         cout << codeline << " " << buffertoken << " [SE_SUB] \n";
+         cout << codeline << " " << buffertoken << " [SE_SUB] \n"; //SÍMBOLO ESPECIAL_SUBTRAÇÃO
          if(code == 12)
-         cout << codeline << " " << buffertoken << " [SE_PT] \n";
+         cout << codeline << " " << buffertoken << " [SE_PT] \n"; //SÍMBOLO ESPECIAL_PONTO
          if(code == 13)
-         cout << codeline << " " << buffertoken << " [SE_PTVG] \n";
+         cout << codeline << " " << buffertoken << " [SE_PTVG] \n"; //SÍMBOLO ESPECIAL_PONTO E VÍRGULA
          if(code == 14)
-         cout << codeline << " " << buffertoken << " [SE_VG] \n";
+         cout << codeline << " " << buffertoken << " [SE_VG] \n"; //SÍMBOLO ESPECIAL_VÍRGULA
          if(code == 15)
-         cout << codeline << " " << buffertoken << " [SE_FPAR] \n";
+         cout << codeline << " " << buffertoken << " [SE_FPAR] \n"; //SÍMBOLO ESPECIAL_FECHA PARÊNTESES
          if(code == 16)
-         cout << codeline << " " << buffertoken << " [SE_IGUAL] \n";
+         cout << codeline << " " << buffertoken << " [SE_IGUAL] \n"; //SÍMBOLO ESPECIAL_IGUAL
          if(code == 17)
-         cout << codeline << " " << buffertoken << " [SE_FCHAVE] \n";
+         cout << codeline << " " << buffertoken << " [SE_FCHAVE] \n"; //SÍMBOLO ESPECIAL_FECHA CHAVES
          if(code == 18)
-         cout << codeline << " " << buffertoken << " [SE_ACHAVE] \n";
+         cout << codeline << " " << buffertoken << " [SE_ACHAVE] \n"; //SÍMBOLO ESPECIAL_ABRE CHAVES
          if(code == 19)
-         cout << codeline << " " << buffertoken << " [SC_MENORIG] \n";
+         cout << codeline << " " << buffertoken << " [SC_MENORIG] \n"; //SÍMBOLO COMPOSTO_MENOR IGUAL
          if(code == 20)
-         cout << codeline << " " << buffertoken << " [SC_DIF] \n";
+         cout << codeline << " " << buffertoken << " [SC_DIF] \n"; //SÍMBOLO COMPOSTO_DIFERENTE
          if(code == 21)
-         cout << codeline << " " << buffertoken << " [SC_MAIORIG] \n";
+         cout << codeline << " " << buffertoken << " [SC_MAIORIG] \n"; //SÍMBOLO COMPOSTO_MAIOR IGUAL
          if(code == 22)
-         cout << codeline << " " << buffertoken << " [SC_FCOM] \n";
+         cout << codeline << " " << buffertoken << " [SC_FCOM] \n"; //SÍMBOLO COMPOSTO_FECHA COMENTÁRIO
          if(code == 23)
-         cout << codeline << " " << buffertoken << " [SC_ATTRIB] \n";
+         cout << codeline << " " << buffertoken << " [SC_ATTRIB] \n"; //SÍMBOLO COMPOSTO_ATRIBUIÇÃO
          if(code == 24)
-         cout << codeline << " " << buffertoken << " [SC_ACOM] \n";
+         cout << codeline << " " << buffertoken << " [SC_ACOM] \n"; //SÍMBOLO COMPOSTO_ABRE COMENTÁRIO
          
          if(code == 99)
-         cout << codeline << " " << buffertoken << " [ERRO/INVALIDO] \n";
+         cout << codeline << " " << buffertoken << " [ERRO/INVALIDO] \n"; //ERRO OU CARACTER INVÁLIDO
          
 }

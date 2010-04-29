@@ -1,2 +1,12 @@
-samuel_1 samuel2
-4 8 15 16 23 42
+pro#gram numerosPerfeitos;
+
+uses crt;
+ 
+var
+	ate, x, soma, i: integer;
+ 
+begin
+	clrscr;
+	x := 0;
+	writeln(Numeros perfeitos abaixo de);
+	Readln(ate);
