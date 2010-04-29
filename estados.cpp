@@ -83,21 +83,50 @@ void AFD::EstadoInicial(char x) ///////////////////////////////////////ESTADO 1
 
 int AFD::Estado2(char x) //////////////////////////////////////////////ESTADO 2
 {
+     bool ispr = false;
+     
      buffertoken.append(1, x);
      si++;
      
      while(true)
      {
-                x = sourcecode[si];
-                if(Estado2loop(x)) //transição 2 para 2 (self-loop)
+                if(!PalavraReservada())
                 {
-                                  buffertoken.append(1, x);
-                                  si++;
+                                       x = sourcecode[si];
+                                       if(Estado2loop(x)) //transição 2 para 2 (self-loop)
+                                       {
+                                                          buffertoken.append(1, x);
+                                                          si++;
+                                       }
+                                       else
+                                       break;
                 }
                 else
-                break;
+                {
+                    ispr = true;
+                    break;
+                }
      }
-     return 1;
+     if (ispr == false)
+         return 1;
+     else
+         return 2;
+}
+
+bool AFD::PalavraReservada()
+{
+     string pr[19] = {"program", "label", "type", "array", "of", "var", "procedure", "function", "begin", "end", "if", "then", "else", "while", "do", "or", "and", "div", "mod"};
+     bool ispr = false;
+     
+     for (int i = 0; i < 19; i++)
+     {
+        if (buffertoken == pr[i] && (sourcecode[si] == ' ' || sourcecode[si] == '\n'))
+        {
+           ispr = true;
+           break;
+        }
+     }
+     return ispr;
 }
 
 bool AFD::Estado2loop(char x)
