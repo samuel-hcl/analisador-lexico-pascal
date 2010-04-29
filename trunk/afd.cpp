@@ -50,3 +50,54 @@ bool AFD::abrearquivo()
     else
         return false;
 }
+
+void AFD::comentPAR()
+{
+     int incoment = codeline;
+     int prox;
+     
+     while(true)
+     {
+                prox = si;
+                if(sourcecode[si] == '\n')
+                codeline++;
+                else
+                if(sourcecode[si] == '*')
+                {
+                                  prox++;
+                                  if(sourcecode[prox] == ')')
+                                  break;
+                                  else
+                                  if(sourcecode[prox] == '\0')
+                                  {
+                                                      si++;
+                                                      output(100);
+                                                      break;
+                                  }
+                }
+                si++;
+                
+                if(sourcecode[si] == '\0')
+                {
+                                  output(100);
+                                  break;
+                }
+     }
+}
+
+void AFD::comentCHAVE()
+{
+     int incoment = codeline;
+     while(sourcecode[si] != '}')
+     {
+                          if(sourcecode[si] == '\n')
+                          codeline++;
+                          
+                          si++;
+                          if(sourcecode[si] == '\0')
+                          {
+                                  output(100);
+                                  break;
+                          }
+     }
+}
