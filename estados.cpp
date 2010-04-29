@@ -75,6 +75,7 @@ void AFD::EstadoInicial(char x) ///////////////////////////////////////ESTADO 1
                           else
                           if(x != ' ' && x != '\n') //tratamento de erro
                           {
+                               buffertoken.append(1, x);
                                output(99);
                                si++;
                           }
@@ -141,11 +142,28 @@ int AFD::Estado3(char x) //////////////////////////////////////////////ESTADO 3
 {
      buffertoken.append(1, x);
      si++;
+     x = sourcecode[si];
+     
+     if(isdigit(x))
+     {
+                   Estado3(x); //transição 3 para 3 (self-loop)
+                   return 3;
+     }
+     else
+     if(isalpha(x))
+     return erroEstado3(x);
+     
+}
+
+int AFD::erroEstado3(char x) ////////////Estado de erro para o estado 3
+{
+     buffertoken.append(1, x);
+     si++;
      
      while(true)
      {
                 x = sourcecode[si];
-                if(Estado3loop(x)) //transição 3 para 3 (self-loop)
+                if(erroEstado3loop(x))
                 {
                                   buffertoken.append(1, x);
                                   si++;
@@ -153,12 +171,13 @@ int AFD::Estado3(char x) //////////////////////////////////////////////ESTADO 3
                 else
                 break;
      }
-     return 3;
+     return 99;
 }
 
-bool AFD::Estado3loop(char x)
+
+bool AFD::erroEstado3loop(char x)
 {
-    if(isdigit(x))
+    if(isalnum(x))
     return true;
     else
     return false;

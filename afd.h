@@ -44,9 +44,11 @@ class AFD
             int Estado23(char x);
             int Estado24(char x);
             
+            
             bool Estado2loop(char x);
             bool PalavraReservada();
-            bool Estado3loop(char x);
+            bool erroEstado3loop(char x);
+            int erroEstado3(char x);
             
             //output
             void output(int code);
