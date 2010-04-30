@@ -1,10 +1,4 @@
-#include <iostream>
-#include <string>
-#include <ctype.h>
-
 #include "afd.h"
-
-using namespace std;
 
 AFD::AFD()
 {
@@ -16,6 +10,7 @@ AFD::AFD()
                            codeline = 1;
                            
                            system("CLS");
+                           
                            EstadoInicial(entrada);
           }
 }                
@@ -43,7 +38,9 @@ bool AFD::abrearquivo()
                    }
 
                    for (int i=0; sourcecode[i] != '\0'; i++)
-            sourcecode[i] = tolower(sourcecode[i]);
+                       sourcecode[i] = tolower(sourcecode[i]);
+            
+            fclose(sourcefile);
 
         return true;
     }
