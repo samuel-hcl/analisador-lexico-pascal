@@ -1,10 +1,4 @@
-#include <iostream>
-#include <string>
-#include <ctype.h>
-
 #include "afd.h"
-
-using namespace std;
 
 void AFD::EstadoInicial(char x) ///////////////////////////////////////ESTADO 1
 {

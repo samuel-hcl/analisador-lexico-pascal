@@ -1,9 +1,11 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <ctype.h>
-using namespace std;
 
 #include "afd.h"
+
+using namespace std;
 
 main()
 {

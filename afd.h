@@ -1,14 +1,17 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <ctype.h>
+
 using namespace std;
 
 class AFD
 {
     public:
            AFD();
+           ofstream fout("output.txt");
     
-    private:
+    private:            
             FILE *sourcefile; //ponteiro do arquivo com o código fonte
             char filename[256]; //nome do arquivo
             bool abrearquivo(); //função que abre o arquivo e carrega o conteúdo para análise

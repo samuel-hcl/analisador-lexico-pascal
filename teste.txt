@@ -1,12 +1,24 @@
-begin
-88
-7a8aaaaa
+(**********************************************************
+           COMENTARIO
+ *********************************************************)
+program koston; 
+uses crt; 
+var 
+   nome : string; 
+   i    : integer; 
 
-sam
+begin 
+     clrscr; 
+     nome := 0; 
+     i := 0; 
 
-(* lol
+     writeln(Digite o nome: ); 
+     readln(nome); 
+     for i := 1 to length(nome) do 
+     begin 
+         write(nome i); 
+         delay(250); 
+     end; 
 
-*)
-lol{xd}
-
-xd
+readln; 
+end.
